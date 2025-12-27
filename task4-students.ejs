@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 4 - Student Management</title>
+</head>
+<body>
+
+<h2>Student Management</h2>
+
+<form method="POST">
+  <input type="text" name="name" placeholder="Student name">
+  <input type="number" name="age" placeholder="Age">
+  <button type="submit">Add Student</button>
+</form>
+
+<% if (error) { %>
+  <p style="color:red"><%= error %></p>
+<% } %>
+
+<ul>
+  <% students.forEach(student => { %>
+    <li style="color: <%= student.age < 21 ? 'red' : 'green' %>">
+      <%= student.name %> — <%= student.age %>
+    </li>
+  <% }) %>
+</ul>
+
+</body>
+</html>

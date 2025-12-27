@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 3 - Users</title>
+</head>
+<body>
+
+<h3>Foydalanuvchilar ro'yxati</h3>
+
+<table border="1" cellpadding="8">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+
+  <% users.forEach(user => { %>
+    <tr style="color: <%= user.age < 21 ? 'red' : 'black' %>">
+      <td><%= user.id %></td>
+      <td><%= user.name %></td>
+      <td><%= user.age %></td>
+    </tr>
+  <% }) %>
+</table>
+
+</body>
+</html>
