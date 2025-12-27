@@ -19,9 +19,10 @@ app.get("/task2", (req, res) => {
 // TASK 3
 app.get("/task3", (req, res) => {
   const users = [
-    { id: 1, name: "Ali", age: 20 },
-    { id: 2, name: "Vali", age: 25 },
-    { id: 3, name: "Sami", age: 18 }
+      { id: 1, name: "Sardor", age: 16 },
+    { id: 2, name: "Abbos", age: 16 },
+    { id: 3, name: "Alisher", age: 16 },
+    { id: 4, name: "Otabek", age: 16 }
   ];
   res.render("task3-users", { users });
 });
@@ -50,3 +51,4 @@ app.post("/task4", (req, res) => {
 app.listen(3000, () => {
   console.log("Server running on http://localhost:3000");
 });
+
